@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <title>Vue Basics</title>
+    <title>Vue</title>
 </head>
+<style>
+    
+</style>
 <body>
-    <div id="vue-app">
-        <h1>{{ sayHello() }}</h1>
-    </div>
+    
+    <div id="app">
+        <h1 v-once>{{title}}</h1>
+        <a v-bind:href="url">Home</a>
 
+        <p v-html="url"></p>
+
+        <p>{{name}}</p>
+        {{sayHello()}}
+    </div>
+    
+    
     <script src="app.js"></script>
 </body>
 </html>
