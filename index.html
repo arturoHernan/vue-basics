@@ -7,18 +7,52 @@
     <title>Vue</title>
 </head>
 <style>
-    
+.coordinates{
+    width: 300px;
+    height: 300px;
+    border: 1px solid red;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: green;
+}
+
+.orange {
+    color: orange;
+}
+
 </style>
 <body>
     
     <div id="app">
-        <h1 v-once>{{title}}</h1>
-        <a v-bind:href="url">Home</a>
+        <h1>{{title}}</h1>
+        
+        <p>My name is: <span v-bind:class="color">{{fullName}}</span></p>
 
-        <p v-html="url"></p>
+        <ul>
+            <li v-for="color in colors" v-on:mousemove="setColor(color)">{{color}}</li>
+        </ul>
 
-        <p>{{name}}</p>
-        {{sayHello()}}
+        <!--<input type="text" v-model="name">
+
+        <p 
+            class="coordinates" 
+            v-on:mousemove="getCoordinates">
+            Coordinates: {{x}} / {{y}} - 
+            <span v-on:mousemove="neutral">Neutral zone</span></p>
+
+        <p>Views: {{views}}</p>
+
+        <button v-on:click="increaseViews(1)">Increase views</button>
+        <button v-on:click="increaseViews(-1)">Increase views</button>
+        |
+        <button v-on:dblclick="increaseViews(5)">Increase views</button>
+        <button v-on:dblclick="increaseViews(-5)">Increase views</button> -->
+        
     </div>
     
     
